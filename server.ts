@@ -62,8 +62,8 @@ if (!fetchRef) {
 }
 
 async function fetchLiveMatch(): Promise<Match | null> {
-  const currentKey = process.env.FOOTBALL_API_KEY || "cd756fd12bafecab0b80c12b3a03f2d3";
-  if (!currentKey || currentKey === "YOUR_FOOTBALL_API_KEY") {
+  const currentKey = process.env.FOOTBALL_API_KEY;
+  if (!currentKey) {
     return null;
   }
 

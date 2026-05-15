@@ -16,5 +16,6 @@ View your app in AI Studio: https://ai.studio/apps/31ee3246-6a0f-4a23-bcd2-11a5c
 1. Install dependencies:
    `npm install`
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+3. Replace `apiKey` in [firebase-applet-config.json](firebase-applet-config.json) with your Firebase Web API key
+4. Run the app:
    `npm run dev`

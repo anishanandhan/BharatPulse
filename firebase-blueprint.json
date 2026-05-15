@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "Message": {
+      "title": "Chat Message",
+      "description": "A message sent by a fan or AI in the chat room.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "UID of the fan, or 'system'/'ai'" },
+        "userName": { "type": "string", "description": "Display name of the sender" },
+        "text": { "type": "string", "description": "Content of the message" },
+        "timestamp": { "type": "string", "format": "date-time", "description": "Server timestamp of the message" },
+        "type": { "type": "string", "enum": ["fan", "ai", "system"] }
+      },
+      "required": ["userId", "userName", "text", "timestamp", "type"]
+    }
+  },
+  "firestore": {
+    "/messages/{messageId}": {
+      "schema": "Message",
+      "description": "Global chat messages for the match."
+    }
+  }
+}

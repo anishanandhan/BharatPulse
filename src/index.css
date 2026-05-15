@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --primary-blue: #2563eb;
+  --primary-red: #dc2626;
+  --primary-saffron: #f97316;
+  --bg-black: #000000;
+  --border-dim: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-black);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.bold-heading {
+  @apply font-black uppercase tracking-tighter italic leading-none;
+}
+
+.mono-meta {
+  @apply font-mono text-[10px] uppercase tracking-[0.3em] text-white/40;
+}
+
+.stark-card {
+  @apply bg-black border border-white/10 rounded-sm;
+}
+
+.ticker-wrap {
+  @apply h-10 border-t border-white/10 z-[100] bg-black overflow-hidden flex items-center;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 25s linear infinite;
+  display: flex;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+

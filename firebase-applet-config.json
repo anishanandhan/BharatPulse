@@ -1,7 +1,7 @@
 {
   "projectId": "gesturevision-7czji",
   "appId": "1:194556204940:web:05f783a02d1632c68e28a9",
-  "apiKey": "AIzaSyAbLI_MzpBVIjOIkJt503Eol2nV37m4tRM",
+  "apiKey": "YOUR_FIREBASE_API_KEY",
   "authDomain": "gesturevision-7czji.firebaseapp.com",
   "firestoreDatabaseId": "ai-studio-31ee3246-6a0f-4a23-bcd2-11a5c9f86b11",
   "storageBucket": "gesturevision-7czji.firebasestorage.app",
